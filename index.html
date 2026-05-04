@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manchester City Roleplay</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f1a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+    }
+
+    body.light {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #111827;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .toggle {
+      cursor: pointer;
+      padding: 8px 12px;
+      background: var(--accent);
+      border-radius: 6px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero img {
+      width: 180px;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: var(--accent);
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 30px;
+      width: 260px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="logo">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Departments</a>
+    <a href="#">Join</a>
+  </nav>
+  <div class="toggle" onclick="toggleMode()">Toggle Mode</div>
+</header>
+
+<section class="hero">
+  <img src="logo.png" alt="logo">
+  <h1>Manchester City Roleplay</h1>
+  <p>Experience immersive, professional-grade roleplay in the heart of Manchester.</p>
+  <a href="https://discord.gg/2Ed8xJkyCE" class="btn">Join Discord</a>
+</section>
+
+<section class="section">
+  <h2>Departments</h2>
+  <div class="cards">
+    <div class="card">Police</div>
+    <div class="card">Fire & Rescue</div>
+    <div class="card">Civilian</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Manchester City Roleplay
+</footer>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('light');
+  }
+</script>
+
+</body>
+</html>
